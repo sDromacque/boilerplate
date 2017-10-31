@@ -14,15 +14,15 @@ if (!shell.test('-e', 'internals/templates')) {
 process.stdout.write('Cleanup started...');
 
 // Reuse existing LanguageProvider and i18n tests
-shell.mv('app/containers/LanguageProvider/tests', 'internals/templates/containers/LanguageProvider');
+shell.mv('app/components/LanguageProvider/tests', 'internals/templates/components/LanguageProvider');
 shell.cp('app/tests/i18n.test.js', 'internals/templates/tests/i18n.test.js');
 
 // Cleanup components/
 shell.rm('-rf', 'app/components/*');
 
-// Handle containers/
-shell.rm('-rf', 'app/containers');
-shell.mv('internals/templates/containers', 'app');
+// Handle components/
+shell.rm('-rf', 'app/components');
+shell.mv('internals/templates/components', 'app');
 
 // Handle tests/
 shell.mv('internals/templates/tests', 'app');

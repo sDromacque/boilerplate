@@ -59,7 +59,7 @@ containerGen.runActions({
   wantLoadable: true,
 })
   .then(checkForErrors)
-  .then(removeTestsDirFrom('containers/RbGeneratedContainerPureComponent'))
+  .then(removeTestsDirFrom('components/RbGeneratedContainerPureComponent'))
   .catch(reportErrorsFor('container/React.PureComponent'));
 
 containerGen.runActions({
@@ -72,11 +72,11 @@ containerGen.runActions({
   wantLoadable: true,
 })
   .then(checkForErrors)
-  .then(removeTestsDirFrom('containers/RbGeneratedContainerComponent'))
+  .then(removeTestsDirFrom('components/RbGeneratedContainerComponent'))
   .catch(reportErrorsFor('container/React.Component'));
 
 containerGen.runActions({
-  name: 'RbGeneratedContainerStateless',
+  name: 'RbGeneratedcomponentstateless',
   type: 'Stateless Function',
   wantHeaders: true,
   wantActionsAndReducer: true,
@@ -85,7 +85,7 @@ containerGen.runActions({
   wantLoadable: true,
 })
   .then(checkForErrors)
-  .then(removeTestsDirFrom('containers/RbGeneratedContainerStateless'))
+  .then(removeTestsDirFrom('components/RbGeneratedcomponentstateless'))
   .catch(reportErrorsFor('container/Stateless'));
 
 const languageGen = plop.getGenerator('language');
