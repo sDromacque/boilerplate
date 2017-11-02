@@ -13,13 +13,22 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import './style.scss';
+import { Button, Container, Header } from 'semantic-ui-react'
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <span>
-        <FormattedMessage {...messages.header} />
-      </span>
+      <Container>
+        <Header as='h1'>Hello world!</Header>
+
+        <Button
+          content='Discover docs'
+          href='http://react.semantic-ui.com'
+          icon='github'
+          labelPosition='left'
+        />
+      </Container>
+
     );
   }
 }
