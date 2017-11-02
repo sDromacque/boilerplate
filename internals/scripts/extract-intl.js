@@ -11,8 +11,9 @@ const animateProgress = require('./helpers/progress');
 const addCheckmark = require('./helpers/checkmark');
 
 const pkg = require('../../package.json');
-const presets = pkg.babel.presets;
-const plugins = pkg.babel.plugins || [];
+const babel = require('../../.babelrc');
+const presets = babel.presets;
+const plugins = babel.plugins || [];
 
 const i18n = require('../../app/i18n');
 import { DEFAULT_LOCALE } from '../../app/components/App/constants';
