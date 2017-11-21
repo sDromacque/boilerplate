@@ -18,6 +18,7 @@ module.exports = (options) => ({
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {
+    noParse: /(mapbox-gl)\.js$/,
     rules: [
       {
         test: /\.js$/, // Transform all .js files required somewhere with Babel
