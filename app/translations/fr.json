@@ -1,4 +1,6 @@
 {
-  "app.components.HomePage.header": "Bienvenue",
-  "app.components.NotFoundPage.header": "This is NotFoundPage component!"
+  "app.components.Header.menu.home": "Accueil",
+  "app.components.Header.menu.map": "map",
+  "app.components.Header.menu.userList": "Utilisateur",
+  "app.components.NotFoundPage.header": "This is NotFoundPage component!-"
 }
