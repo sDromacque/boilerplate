@@ -1,4 +1,6 @@
 {
-  "app.components.HomePage.header": "This is HomePage component!",
+  "app.components.Header.menu.home": "Home",
+  "app.components.Header.menu.map": "MAP",
+  "app.components.Header.menu.userList": "User list",
   "app.components.NotFoundPage.header": "This is NotFoundPage component!"
 }
