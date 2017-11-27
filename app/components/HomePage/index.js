@@ -3,7 +3,6 @@ import ReactMapboxGl, { ScaleControl, RotationControl, ZoomControl } from 'react
 import 'semantic-ui-css/semantic.min.css';
 
 // const { mapbox } = require('../../../conf/config.json');
-import './style.scss';
 
 const accessToken = 'pk.eyJ1Ijoic2Ryb21hY3F1ZSIsImEiOiJjajZnZGdmc3UwN3QwMnFvNTI0M3FwZnBkIn0.fXR7m3qusVEN_XadXVeshw';
 const style = ({
