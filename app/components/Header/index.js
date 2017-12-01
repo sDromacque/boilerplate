@@ -9,9 +9,9 @@ class Header extends React.PureComponent {
     activeItem: 'home',
     color: 'blue',
     items: [
-        { name: 'home', color: 'blue', mess: { ...header.home } },
-        { name: 'userList', color: 'green', mess: { ...header.userList } },
-        { name: 'map', color: 'yellow', mess: { ...header.map } },
+      { name: 'home', color: 'blue', mess: { ...header.home } },
+      { name: 'userList', color: 'green', mess: { ...header.userList } },
+      { name: 'map', color: 'yellow', mess: { ...header.map } },
     ],
     dropDown: [
       'fr',
