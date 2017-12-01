@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMapboxGl, { ScaleControl, RotationControl, ZoomControl } from 'react-mapbox-gl';
+import ReactMapboxGl, { ScaleControl, RotationControl, ZoomControl, Layer } from 'react-mapbox-gl';
 import 'semantic-ui-css/semantic.min.css';
 
 const accessToken = 'pk.eyJ1Ijoic2Ryb21hY3F1ZSIsImEiOiJjajZnZGdmc3UwN3QwMnFvNTI0M3FwZnBkIn0.fXR7m3qusVEN_XadXVeshw';
@@ -21,6 +21,20 @@ const mapStyle = {
   width: '100vw',
 };
 
+const paintLayer = {
+  'fill-extrusion-color': '#aaa',
+  'fill-extrusion-height': {
+    type: 'identity',
+    property: 'height'
+  },
+  'fill-extrusion-base': {
+    type: 'identity',
+    property: 'min_height'
+  },
+  'fill-extrusion-opacity': 0.6
+};
+
+
 const HomePage = () => (
   <div>
     <Map
@@ -34,6 +48,15 @@ const HomePage = () => (
       <ZoomControl />
       <RotationControl
         style={{ top: 80 }}
+      />
+      <Layer
+        id="3d-buildings"
+        sourceId="composite"
+        sourceLayer="building"
+        filter={['==', 'extrude', 'true']}
+        type="fill-extrusion"
+        minZoom={14}
+        paint={paintLayer}
       />
     </Map>
   </div>
