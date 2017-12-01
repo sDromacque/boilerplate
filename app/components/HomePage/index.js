@@ -2,8 +2,6 @@ import React from 'react';
 import ReactMapboxGl, { ScaleControl, RotationControl, ZoomControl } from 'react-mapbox-gl';
 import 'semantic-ui-css/semantic.min.css';
 
-// const { mapbox } = require('../../../conf/config.json');
-
 const accessToken = 'pk.eyJ1Ijoic2Ryb21hY3F1ZSIsImEiOiJjajZnZGdmc3UwN3QwMnFvNTI0M3FwZnBkIn0.fXR7m3qusVEN_XadXVeshw';
 const style = ({
   style: 'mapbox://styles/mapbox/streets-v9',
@@ -11,7 +9,7 @@ const style = ({
 const mapCenter = [3.057256000000052, 50.62924999999999];
 
 const position = ({
-  position: 'bottomLeft',
+  position: 'bottom-left',
 });
 
 const Map = ReactMapboxGl({
@@ -19,7 +17,7 @@ const Map = ReactMapboxGl({
 });
 
 const mapStyle = {
-  height: '98vh',
+  height: '96vh',
   width: '100vw',
 };
 
@@ -37,7 +35,6 @@ const HomePage = () => (
       <RotationControl
         style={{ top: 80 }}
       />
-
     </Map>
   </div>
 );

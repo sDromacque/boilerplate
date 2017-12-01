@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu, Dropdown } from 'semantic-ui-react';
 import { FormattedMessage } from 'react-intl';
 import header from './messages';
+import './style.scss';
 
 class Header extends React.PureComponent {
   state = {
