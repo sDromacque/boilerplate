@@ -1,0 +1,20 @@
+{
+  "mapbox": {
+    "token": "pk.eyJ1Ijoic2Ryb21hY3F1ZSIsImEiOiJjajZnZGdmc3UwN3QwMnFvNTI0M3FwZnBkIn0.fXR7m3qusVEN_XadXVeshw",
+    "styles": {
+      "default": "mapbox://styles/mapbox/streets-v9"
+    },
+    "layer": {
+      "fill-extrusion-height": {
+        "type": "identity",
+        "property": "height"
+      },
+      "fill-extrusion-base": {
+        "type": "identity",
+        "property": "min_height"
+      },
+      "fill-extrusion-opacity": 0.6,
+      "fill-extrusion-color": "#aaa"
+    }
+  }
+}

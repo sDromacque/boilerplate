@@ -1,53 +1,32 @@
 import React from 'react';
 import ReactMapboxGl, { ScaleControl, RotationControl, ZoomControl, Layer } from 'react-mapbox-gl';
 import 'semantic-ui-css/semantic.min.css';
+import './style.scss';
 
-const accessToken = 'pk.eyJ1Ijoic2Ryb21hY3F1ZSIsImEiOiJjajZnZGdmc3UwN3QwMnFvNTI0M3FwZnBkIn0.fXR7m3qusVEN_XadXVeshw';
-const style = ({
-  style: 'mapbox://styles/mapbox/streets-v9',
-});
+import config from '../../../conf/config.json';
+
 const mapCenter = [3.057256000000052, 50.62924999999999];
 
-const position = ({
-  position: 'bottom-left',
-});
-
-const Map = ReactMapboxGl({
-  accessToken,
-});
-
-const mapStyle = {
-  height: '96vh',
-  width: '100vw',
+const optionsMapBox = {
+  accessToken: config.mapbox.token,
+  style: config.mapbox.styles.default,
+  threed: config.mapbox.layer,
 };
 
-const paintLayer = {
-  'fill-extrusion-color': '#aaa',
-  'fill-extrusion-height': {
-    type: 'identity',
-    property: 'height'
-  },
-  'fill-extrusion-base': {
-    type: 'identity',
-    property: 'min_height'
-  },
-  'fill-extrusion-opacity': 0.6
-};
-
+const Map = ReactMapboxGl({ accessToken: optionsMapBox.accessToken });
 
 const HomePage = () => (
   <div>
     <Map
       center={mapCenter}
-      style={style.style}
-      containerStyle={mapStyle}
+      style={optionsMapBox.style}
     >
       <ScaleControl
-        position={position.position}
+        className="measure"
       />
       <ZoomControl />
       <RotationControl
-        style={{ top: 80 }}
+        className="rotationControl"
       />
       <Layer
         id="3d-buildings"
@@ -56,7 +35,7 @@ const HomePage = () => (
         filter={['==', 'extrude', 'true']}
         type="fill-extrusion"
         minZoom={14}
-        paint={paintLayer}
+        paint={optionsMapBox.threed}
       />
     </Map>
   </div>

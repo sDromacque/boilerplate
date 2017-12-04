@@ -1,13 +1,11 @@
-.wrap {
-  width: 1000px;
-  height: 1000px;
-  display: flex;
-}
+.mapboxgl-map{
+  height: 96vh;
+  width: 100vw;
 
-.map {
-  flex: 1;
-  border: 1px solid red;
-}
-
-.panel {
+  .measure {
+    margin-bottom: 1%;
+  }
+  .rotationControl {
+    margin-top: 1%;
+  }
 }
