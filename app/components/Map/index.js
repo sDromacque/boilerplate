@@ -14,7 +14,7 @@ const optionsMapBox = {
 
 mapboxgl.accessToken = optionsMapBox.accessToken;
 
-class HomePage extends React.Component {
+class Map extends React.Component {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -65,4 +65,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default Map;
